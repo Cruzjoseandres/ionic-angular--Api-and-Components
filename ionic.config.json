@@ -1,0 +1,7 @@
+{
+  "name": "tarea Ionic Api",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
