@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { IonCardContent, IonCardTitle, IonCardHeader, IonCard, IonCardSubtitle, IonContent } from "@ionic/angular/standalone";
+import { IonCardContent, IonCardTitle, IonCardHeader, IonCard, IonCardSubtitle, IonContent, IonList, IonLabel, IonListHeader, IonItem, IonIcon, IonText } from "@ionic/angular/standalone";
 import { PlaceHolderServices } from '../services/place-holder-services';
 import { User } from '../models/places-holder.model';
 import { CommonModule } from '@angular/common';
@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-detail',
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.scss'],
-  imports: [IonCardContent, IonCardTitle, IonCardSubtitle, IonCardHeader, IonCard, IonContent, CommonModule],
+  imports: [IonText, IonIcon, IonItem, IonListHeader, IonLabel, IonList, IonCardContent, IonCardTitle, IonCardSubtitle, IonCardHeader, IonCard, IonContent, CommonModule],
 })
 export class DetailComponent  implements OnInit {
 
