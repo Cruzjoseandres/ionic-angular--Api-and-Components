@@ -13,9 +13,11 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-list *ngFor="let post of postsList">
-  <ion-item (click)="detail(post.id)">
-    <ion-label>{{ post.title }}</ion-label>
+  <ion-list *ngFor="let user of userList">
+  <ion-item (click)="detail(user.id)">
+    <ion-label>{{ user.name }}</ion-label>
+    <ion-label>{{ user.email }}</ion-label>
+    <ion-label>{{ user.phone }}</ion-label>
   </ion-item>
 </ion-list>
 </ion-content>

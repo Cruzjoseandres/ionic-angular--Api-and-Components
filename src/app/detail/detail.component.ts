@@ -2,7 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IonCardContent, IonCardTitle, IonCardHeader, IonCard, IonCardSubtitle, IonContent } from "@ionic/angular/standalone";
 import { PlaceHolderServices } from '../services/place-holder-services';
-import { Post } from '../models/places-holder.model';
+import { User } from '../models/places-holder.model';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -15,13 +15,13 @@ export class DetailComponent  implements OnInit {
 
   private routerActive = inject(ActivatedRoute);
   private _placesHolderService = inject(PlaceHolderServices);
-  post : Post | null = null;
+  user : User | null = null;
   ngOnInit() {
     let id = this.routerActive.snapshot.paramMap.get('id') ?? "";
     console.log(id);
-    this._placesHolderService.getPlaceHolderById<Post>(id)
-      .subscribe((response : Post) => {
-        this.post = response;
+    this._placesHolderService.getPlaceHolderById<User>(id)
+      .subscribe((response : User) => {
+        this.user = response;
         console.log(response);
       });
   }

@@ -12,10 +12,10 @@ export class PlaceHolderServices {
 
 
   getPlaceHolder<T>(): Observable<T[]>{
-    return this._http.get<T[]>(`${this.baseUrl}/posts`);
+    return this._http.get<T[]>(`${this.baseUrl}/users`);
   }
 
   getPlaceHolderById<T>(id: String): Observable<T> {
-    return this._http.get<T>(`${this.baseUrl}/posts/${id}`);
+    return this._http.get<T>(`${this.baseUrl}/users/${id}`);
   }
 }
